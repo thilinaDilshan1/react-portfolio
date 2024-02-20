@@ -1,13 +1,11 @@
 import React from 'react'
-import Navbar from 'react-bootstrap/Navbar';
+import './Home.css';
+import Navbar from '../../components/Navbar/Navbar';
 
 export default function Home() {
   return (
     <div>
-        <div className="navbar">
-            <div className="navbarLeft"></div>
-            <div className="navbarRight"></div>
-        </div>
+        <Navbar/>
     </div>
   )
 }

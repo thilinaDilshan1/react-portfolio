@@ -1,0 +1,21 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    background-color: #1f242d;
+    color: white;
+}
+
+.navbarLeft {
+    margin-left: 100px;
+    flex: 6;
+}
+
+.navbarRight {
+    flex: 6;
+}
+
+.navbarItem {
+    margin-right: 50px;
+}
