@@ -1,9 +1,11 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './Navbar.css';
 import Home from '../../Pages/Home/Home';
 import About from '../../Pages/About/About';
-
+import Skills from '../../Pages/Skills/Skills';
+import Projects from '../../Pages/Projects/Projects';
+import Contact from '../../Pages/Contact/Contact';
 
 export default function Navbar() {
   return (
@@ -12,15 +14,23 @@ export default function Navbar() {
             <div className="navbarLeft">
               <h2>Portfolio</h2>
             </div>
-            <div className="navbarRight">
+            <Router>
+              <div className="navbarRight">
                 <div className="navbarItems">
-                    <span className="navbarItem">Home</span>
-                    <span className="navbarItem">About</span>
-                    <span className="navbarItem">Skills</span>
-                    <span className="navbarItem">Projects</span>
-                    <span className="navbarItem">Contact</span>
+                  <Link to="/" className="navbarItem">Home</Link>
+                  <Link to="/about" className="navbarItem">About</Link>
+                  <Link to="/skills" className="navbarItem">Skills</Link>
+                  <Link to="/projects" className="navbarItem">Projects</Link>
+                  <Link to="/contact" className="navbarItem">Contact</Link>
                 </div>
-            </div>
+              </div>
+
+              <Route path="/" exact render={() => <Home />} />
+              <Route path="/about" render={() => <About />} />
+              <Route path="/skills" render={() => <Skills />} />
+              <Route path="/projects" render={() => <Projects />} />
+              <Route path="/contact" render={() => <Contact />} />
+            </Router>
         </div>
     </div>
   )
