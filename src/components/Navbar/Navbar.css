@@ -9,13 +9,19 @@
 
 .navbarLeft {
     margin-left: 100px;
-    flex: 6;
+    flex: 8;
 }
 
 .navbarRight {
     flex: 6;
 }
 
+.navbarItems {
+    text-decoration: none;
+}
+
 .navbarItem {
     margin-right: 50px;
+    text-decoration: none;
+    color: white;
 }
