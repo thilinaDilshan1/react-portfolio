@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter,Routes,Route} from 'react-router-dom';
+import { BrowserRouter,Routes,Route  } from 'react-router-dom';
 import About from '../../Pages/About/About';
 import Skills from '../../Pages/Skills/Skills';
 import Projects from '../../Pages/Projects/Projects';
@@ -7,6 +7,7 @@ import Contact from '../../Pages/Contact/Contact';
 import Home from '../../Pages/Home/Home';
 
 export default function NavRouter() {
+    
   return (
     <div>
         <BrowserRouter>
@@ -21,3 +22,4 @@ export default function NavRouter() {
     </div>
   )
 }
+

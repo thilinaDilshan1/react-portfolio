@@ -16,12 +16,86 @@
     flex: 6;
 }
 
-.navbarItems {
-    text-decoration: none;
-}
-
 .navbarItem {
     margin-right: 50px;
     text-decoration: none;
     color: white;
+    transition: .5s;
+    opacity: 0;
+    animation: sliderTop .3s ease forwards;
+    animation-delay: calc(0.2s*var(--i));
+}
+
+.active {
+    color: #0ef(49, 117, 220);
+}
+
+
+/*KEYFRAMES ANIMATION*/
+
+@keyframes sliderRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes sliderLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes sliderTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes sliderBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ZoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
