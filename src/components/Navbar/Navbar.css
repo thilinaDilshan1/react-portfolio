@@ -5,6 +5,7 @@
     display: flex;
     background-color: #1f242d;
     color: white;
+    z-index: 99;
 }
 
 .navbarLeft {
@@ -22,8 +23,8 @@
     color: white;
     transition: .5s;
     opacity: 0;
-    animation: sliderTop 1s ease forwards;
-    animation-delay: 2s;
+    animation: sliderBottom 1s ease forwards;
+    animation-delay: .3s;
 }
 
 .active {
